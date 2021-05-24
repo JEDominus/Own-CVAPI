@@ -89,8 +89,23 @@
 							target/${project.name}-${project.version}.jar</web>
 					</processTypes>
 				</configuration>
-			</plugin>
-			
+			</plugin>			
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.heroku.sdk</groupId>
+						<artifactId>heroku-maven-plugin</artifactId>
+						<configuration>
+							<appName>at-cv-je-deploy</appName>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
