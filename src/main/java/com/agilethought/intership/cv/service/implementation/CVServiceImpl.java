@@ -1,5 +1,6 @@
 package com.agilethought.intership.cv.service.implementation;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,12 @@ public class CVServiceImpl implements CVService {
 
 	@Autowired
 	private CVValidator cvValidator;
+	
+	@Override
+	public List<CV> getAllCV(){
+		List<CV> listOfCV = cvRepository.findAll();
+		return listOfCV;
+	}
 
 	@Override
 	public CV getCvById(String id) {

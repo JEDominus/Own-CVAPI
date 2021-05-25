@@ -1,5 +1,7 @@
 package com.agilethought.intership.cv.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,6 +27,12 @@ public class CVController {
 
 	@Autowired
 	private CVService cvService;
+	
+	@ResponseStatus
+	@GetMapping("/person")
+	public List<CV> getAllCv(){
+		return cvService.getAllCV();
+	}
 
 	@ResponseStatus(HttpStatus.OK)
 	@GetMapping("/person/{id}")
