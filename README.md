@@ -13,12 +13,16 @@
     <tr>
       <th scope="col">Developer</th>
       <th scope="col">Email</th>
+      <th scope="col">Phone number</th>
+      <th scope="col">CV with this backend</th>
     </tr>
   </thead>
   <tbody>
     <tr>
 		  <td>Javier Emmanuel Mota Bayardo</td>
 		  <td>je.dominus.hatred@gmail.com</td>
+		  <td>3320801954</td>
+		  <td>https://cv-at-app.herokuapp.com/curriculum/60ad129bcbf41e79486ff365</td>
     </tr>
   </tbody>
 </table>
